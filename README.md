@@ -44,23 +44,7 @@ Serverless: Routes for myLambda:
 Serverless: (none)
 
 Serverless: Routes for my-project-dev-myLambda_proxy:
-Serverless: POST /proxy/my-project-dev-myLambda
 Serverless: POST /2015-03-31/functions/my-project-dev-myLambda/invocations
-```
-
-### Calling via HTTP Post:
-
-The body of the POST should match the JSON data that would ordinarily be passed in a lambda-to-lambda call. i.e.
-
-```bash
-curl -X POST \
-  http://localhost:4000/proxy/my-project-dev-myLambda \
-  -H 'Cache-Control: no-cache' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "some-key": "some-value",
-    "other-key": false
-}'
 ```
 
 ### Invoking the function via the AWS SDK:
